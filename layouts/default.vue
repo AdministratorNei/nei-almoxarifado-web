@@ -1,32 +1,25 @@
 <template>
   <div id="content">
     <Header />
-    <div class="d-flex"> 
-      <div class="fluid-container">
-        
-        <NavbarNavSideBar /> 
-      </div>
-      <div class="main">
-        <slot />
-      </div> 
-    </div>
-    <div class="d-flex">
-      <div class="flex-grow-1">
-        <Footer />
-      </div>
+    <div class="container-fluid d-block col-1">
+      <NavbarNavSideBar id="sidebar"/>
+      <Footer />
+    </div>  
+    <div id="content-wrap">
+      <slot />
     </div>
   </div>
-  </template>
-  
-  <style>
-  .main{
-    margin-top: 100px;
-    margin-bottom: 50px;
-  } 
-  .fluid-container{
-    position: static;
+</template>
+
+<style> 
+  #content { 
+    position: relative;
+    min-height: 100vh;
   }
-  .teste{
-    position: static;
+
+  #content-wrap { 
+    padding-left: 3rem;
+    padding-bottom: 18rem;
+    padding-top: 9rem;  
   }
-  </style>
+</style>
